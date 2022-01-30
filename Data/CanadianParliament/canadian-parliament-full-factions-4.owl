@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http:/foo.com/canadian-parliament-1#"
+     xml:base="http:/foo.com/canadian-parliament-1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http:/foo.com/canadian-parliament-1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#aux1 -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#aux1"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#aux2 -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#aux2"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#aux3 -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#aux3"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#aux4 -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#aux4"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#aux5 -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#aux5"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#hasMember"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#hasParliament -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#hasParliament"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#hasProvince -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#hasProvince"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#livesIn -->
+
+    <owl:ObjectProperty rdf:about="http:/foo.com/canadian-parliament-1#livesIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#AB -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#AB">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#ABfaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#ABfaction">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">21</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#ABresident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#ABresident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonABresident"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#ABresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#ABresident">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http:/foo.com/canadian-parliament-1#AB"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#BC -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#BC">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#CanadianParliament -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#CanadianParliament">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">21</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#ABresident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">28</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#ABresident"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">279</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">305</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#NLresident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#NSresident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#QCresident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#CanadianProvince -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#CanadianResident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#CanadianResident">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#MB -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#MB">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NB -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NB">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NL -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NL">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NLfaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NLfaction">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#NLresident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonNLresident"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NLresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NLresident">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http:/foo.com/canadian-parliament-1#NL"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NS -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NS">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NSfaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NSfaction">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#NSresident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonNSresident"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#NSresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#NSresident">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http:/foo.com/canadian-parliament-1#NS"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#ON -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#ON">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#PE -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#PE">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#QC -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#QC">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#QCfaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#QCfaction">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">75</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#QCresident"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonQCresident"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#QCresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#QCresident">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#livesIn"/>
+                <owl:someValuesFrom rdf:resource="http:/foo.com/canadian-parliament-1#QC"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#SK -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#SK">
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianProvince"/>
+    </owl:Class>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#bigProvinceFaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#bigProvinceFaction"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#mediumProvinceFaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#mediumProvinceFaction"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#nonABresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#nonABresident"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#nonCanadianResident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#nonNLresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#nonNLresident"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#nonNSresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#nonNSresident"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#nonQCresident -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#nonQCresident"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#smallProvinceFaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#smallProvinceFaction"/>
+    
+
+
+    <!-- http:/foo.com/canadian-parliament-1#tinyProvinceFaction -->
+
+    <owl:Class rdf:about="http:/foo.com/canadian-parliament-1#tinyProvinceFaction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#tinyProvinceFaction"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#smallProvinceFaction"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">40</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#mediumProvinceFaction"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">41</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#bigProvinceFaction"/>
+    </owl:Class>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux1"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#ABresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux2"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#CanadianResident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux3"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#QCresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux4"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#nonNSresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux5"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#NLresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux1"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#nonABresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux2"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#nonCanadianResident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux3"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#nonQCresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux4"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#NSresident"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http:/foo.com/canadian-parliament-1#aux5"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+        <rdfs:subClassOf rdf:resource="http:/foo.com/canadian-parliament-1#nonNLresident"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
